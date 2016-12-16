@@ -123,6 +123,6 @@ write.csv(by.tweet, file=paste(searchterm, '_opin.csv'), row.names=TRUE)
 
 p <- ggplot(by.tweet, aes(created, number)) + geom_line(aes(group=tweet, color=tweet), size=1) +
   geom_point(aes(group=tweet, color=tweet), size = 1) +
-  theme(text = element_text(size=18), axis.text.x = element_text(angle=90, vjust=1))
+  theme(text = element_text(size=18), axis.text.x = element_text(angle=90, vjust=1)) +
   ggtitle(searchterm)
 ggsave(file=paste(searchterm, '_plot.jpeg'))
